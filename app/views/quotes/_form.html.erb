@@ -1,0 +1,61 @@
+<%= form_for(@quote) do |f| %>
+  <% if @quote.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@quote.errors.count, "error") %> prohibited this quote from being saved:</h2>
+
+      <ul>
+      <% @quote.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :loan_type %><br />
+    <%= f.text_field :loan_type %>
+  </div>
+  <div class="field">
+    <%= f.label :purchase_price %><br />
+    <%= f.text_field :purchase_price %>
+  </div>
+  <div class="field">
+    <%= f.label :fico_score %><br />
+    <%= f.number_field :fico_score %>
+  </div>
+  <div class="field">
+    <%= f.label :down_payment %><br />
+    <%= f.text_field :down_payment %>
+  </div>
+  <div class="field">
+    <%= f.label :property_type %><br />
+    <%= f.text_field :property_type %>
+  </div>
+  <div class="field">
+    <%= f.label :appraised_value %><br />
+    <%= f.text_field :appraised_value %>
+  </div>
+  <div class="field">
+    <%= f.label :occupancy_type %><br />
+    <%= f.text_field :occupancy_type %>
+  </div>
+  <div class="field">
+    <%= f.label :loan_amount %><br />
+    <%= f.text_field :loan_amount %>
+  </div>
+  <div class="field">
+    <%= f.label :program_type %><br />
+    <%= f.text_field :program_type %>
+  </div>
+  <div class="field">
+    <%= f.label :document_type %><br />
+    <%= f.text_field :document_type %>
+  </div>
+  <div class="field">
+    <%= f.label :customer_id %><br />
+    <%= f.number_field :customer_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

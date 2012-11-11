@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Email:</b>
+  <%= @clnmember.email %>
+</p>
+
+<p>
+  <b>First name:</b>
+  <%= @clnmember.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @clnmember.last_name %>
+</p>
+
+<p>
+  <b>Phone no:</b>
+  <%= @clnmember.phone_no %>
+</p>
+
+<p>
+  <b>Company name:</b>
+  <%= @clnmember.company_name %>
+</p>
+
+<p>
+  <b>Occupation:</b>
+  <%= @clnmember.occupation %>
+</p>
+
+
+<%= link_to 'Edit', edit_clnmember_path(@clnmember) %> |
+<%= link_to 'Back', clnmembers_path %>

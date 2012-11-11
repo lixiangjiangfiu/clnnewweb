@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Loan type:</b>
+  <%= @quote.loan_type %>
+</p>
+
+<p>
+  <b>Purchase price:</b>
+  <%= @quote.purchase_price %>
+</p>
+
+<p>
+  <b>Fico score:</b>
+  <%= @quote.fico_score %>
+</p>
+
+<p>
+  <b>Down payment:</b>
+  <%= @quote.down_payment %>
+</p>
+
+<p>
+  <b>Property type:</b>
+  <%= @quote.property_type %>
+</p>
+
+<p>
+  <b>Appraised value:</b>
+  <%= @quote.appraised_value %>
+</p>
+
+<p>
+  <b>Occupancy type:</b>
+  <%= @quote.occupancy_type %>
+</p>
+
+<p>
+  <b>Loan amount:</b>
+  <%= @quote.loan_amount %>
+</p>
+
+<p>
+  <b>Program type:</b>
+  <%= @quote.program_type %>
+</p>
+
+<p>
+  <b>Document type:</b>
+  <%= @quote.document_type %>
+</p>
+
+<p>
+  <b>Customer:</b>
+  <%= @quote.customer_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_quote_path(@quote) %> |
+<%= link_to 'Back', quotes_path %>

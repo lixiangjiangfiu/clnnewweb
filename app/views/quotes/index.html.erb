@@ -1,0 +1,43 @@
+<h1>Listing quotes</h1>
+
+<table>
+  <tr>
+    <th>Loan type</th>
+    <th>Purchase price</th>
+    <th>Fico score</th>
+    <th>Down payment</th>
+    <th>Property type</th>
+    <th>Appraised value</th>
+    <th>Occupancy type</th>
+    <th>Loan amount</th>
+    <th>Program type</th>
+    <th>Document type</th>
+    <th>Customer</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @quotes.each do |quote| %>
+  <tr>
+    <td><%= quote.loan_type %></td>
+    <td><%= quote.purchase_price %></td>
+    <td><%= quote.fico_score %></td>
+    <td><%= quote.down_payment %></td>
+    <td><%= quote.property_type %></td>
+    <td><%= quote.appraised_value %></td>
+    <td><%= quote.occupancy_type %></td>
+    <td><%= quote.loan_amount %></td>
+    <td><%= quote.program_type %></td>
+    <td><%= quote.document_type %></td>
+    <td><%= quote.customer_id %></td>
+    <td><%= link_to 'Show', quote %></td>
+    <td><%= link_to 'Edit', edit_quote_path(quote) %></td>
+    <td><%= link_to 'Destroy', quote, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Quote', new_quote_path %>
